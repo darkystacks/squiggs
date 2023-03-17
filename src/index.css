@@ -1,0 +1,385 @@
+@import url("//db.onlinewebfonts.com/c/35106d6019ed0c5cceca3cfd5ad83db2?family=Xolonium");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background-color: black;
+    margin: 0rem;
+    /*overflow: hidden;*/
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.5;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+#blob {
+    position: absolute;
+    background: linear-gradient(
+            to right,
+            orangered,
+            orange
+    );
+    animation: rotate 20s infinite;
+    height: 10vmax;
+    aspect-ratio: 1;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+#blur {
+    height: 2300px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(7vmax);
+}
+
+.header {
+    position: relative;
+    width: 100%;
+}
+
+.date1 {
+    font-family: Xolonium, serif;
+    position: absolute;
+    left: 7vw;
+    top: 2vh;
+    font-size: 18px;
+    font-weight: 700;
+    z-index: 3;
+    color: #DC5B24;
+}
+
+.inscription::after {
+    content: "";
+    width: 25vw;
+    height: 1px;
+    border-bottom: 2px solid #DC5B24;
+    position: absolute;
+    top: 1vh;
+    left: 15vw;
+    z-index: 2;
+}
+
+.inscription::before {
+    content: "";
+    width: 25vw;
+    height: 1px;
+    border-bottom: 2px solid #DC5B24;
+    position: absolute;
+    top: 1vh;
+    right: 15vw;
+}
+
+.inscription {
+    font-family: Xolonium, serif;
+    position: absolute;
+    left: 43vw;
+    top: 2vh;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    z-index: 5;
+    color: #DC5B24;
+    transition: 0.5s;
+}
+
+.inscription:hover {
+    color: white;
+}
+
+.date2 {
+    font-family: Xolonium, serif;
+    position: absolute;
+    right: 7vw;
+    top:2vh;
+    font-size: 18px;
+    font-weight: 700;
+    z-index: 3;
+    color: #DC5B24;
+}
+
+.main {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.price-chart {
+    position: absolute;
+    top: 150px;
+    width: 1488px;
+    height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.lowest {
+    position: absolute;
+    top: 551px;
+    left: 60px;
+    color: white;
+    border: 2px solid #DC5B24;
+    padding: 10px 40px;
+    border-radius: 17px;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+
+    transition: 0.5s;
+}
+
+.lowest:hover, .highest:hover {
+    color: black;
+    background-color: #DC5B24;
+}
+
+.highest {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    color: white;
+    border: 2px solid #DC5B24;
+    padding: 10px 40px;
+    border-radius: 17px;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.price-chart__blur {
+    position: absolute;
+    height: 100%;
+    width: 61%;
+    border-radius: 17px;
+    background-color: black;
+    background-image: url(price.svg);
+    background-size: cover;
+    background-position: -157px 9px;
+    background-repeat: no-repeat;
+    filter: blur(2px)
+}
+
+.price-chart__blur::before {
+    position: absolute;
+    content: '';
+    background: linear-gradient(rgb(220, 91, 36), rgba(0,0,0,0.075));
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /*border: 5px solid #DC5B24;*/
+    filter: blur(0);
+    border-radius: 15px;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.price-chart__blur__border {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 61%;
+    border: 1px solid #DC5B24;
+    border-radius: 17px;
+}
+
+.price-chart__blur__title {
+    font-family: Xolonium, sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    margin-top: 17px;
+    margin-bottom: 53px;
+}
+
+.price-chart__blur__text__title {
+    font-family: Xolonium, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    margin-left: 30px;
+    margin-bottom: 9px;
+}
+
+.price-chart__blur__text {
+    width: 561px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    margin-left: 30px;
+    margin-bottom: 39px;
+}
+
+.news {
+    position: relative;
+    top: 790px;
+    left: -45px;
+    width: 100%;
+    height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;
+}
+
+.news__block {
+    position: relative;
+    width: 340px;
+    height: 470px;
+    border: 1px solid #DC5B24;
+    margin-left: 75px;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    transition: all 1s;
+}
+
+.news__block:hover > .news__block__img[fill]{
+    fill: white;
+}
+.news__block:hover > .news__block__link{
+    color: white;
+}
+
+.news__block:hover {
+    /*background:linear-gradient(#DC5B24, #000);*/
+    background-color: #DC5B24;
+    opacity: 0.8;
+}
+
+.news__block__title {
+    margin: 20px auto;
+    font-size: 24px;
+    font-family: Xolonium, sans-serif;
+    font-weight: 700;
+
+}
+
+.news__block__text {
+    width: 268px;
+    margin: 20px auto;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.news__block__link {
+    position: absolute;
+    bottom: 20px;
+    left: 130px;
+    color: #DC5B24;
+    text-decoration: none;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    transition: all 1s;
+
+}
+
+.news__block__img {
+    margin-top: 30px;
+    transition: all 1s;
+}
+
+.tweets {
+    position: relative;
+    top: 750px;
+    left: -45px;
+    width: 50%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;
+}
+
+.tweet {
+    position: absolute;
+    border-radius: 20px;
+    width: 600px;
+    transition: all 1s;
+    border: 2px solid #DC5B24;
+}
+
+.t1 {
+    left: 10px;
+    top: 10px;
+    opacity: 0.5;
+}
+
+.t3 {
+    right: 10px;
+    top: 100px;
+    opacity: 0.5;
+}
+.t2 {
+    opacity: 0;
+    top: 10px;
+}
+
+.t4  {
+    opacity: 0;
+}
+
+.tweets:hover > .t1{
+    transform: translate(-40%, -50%);
+    opacity: 1;
+
+}
+
+.tweets:hover > .t2{
+    transform: translate(70%, -70%);
+    opacity: 1;
+}
+
+.tweets:hover > .t3{
+    transform: translate(50%, 40%);
+    opacity: 1;
+
+}
+
+.tweets:hover > .t4{
+    transform: translate(-75%, 70%);
+    opacity: 1;
+
+}
+
+.table {
+    position: relative;
+    top: 800px;
+}
+
+.table:hover {
+    border: 1px solid #DC5B24;
+    border-radius: 30px;
+}
