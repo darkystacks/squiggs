@@ -17,7 +17,7 @@ Enter the directory, run the commands below in your terminal, follow the local a
 npm i
 ```
 ```
-npm run build:dev
+npm run build
 ```
 ```
 npm run start
