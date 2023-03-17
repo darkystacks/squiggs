@@ -24,3 +24,5 @@ npm run start
 ```
 
 ### Enjoy!
+Also there is a user guide:
+https://drive.google.com/drive/folders/1PBS_jeBv8FWiBFdwVRnhIbj0QoFUBrwm?usp=sharing
